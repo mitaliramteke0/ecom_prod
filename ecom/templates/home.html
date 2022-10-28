@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data</title>
+</head>
+<body>
+
+<h1 ><centre>{{message }}</centre>  </h1>
+<centre><><input type=submit value="ADD CONSUMER" onclick="windows.location='/consumer/save";></centre>
+<table border="2"></table>>
+            <thead>
+
+                <th>Product Name</th>
+                <th>Product Brand</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Warranty</th>
+                <th>HomeDelivery</th>
+            </thead>
+
+    {% if consumers %}
+{% for consumer in consumers  %}
+             <tbody>
+                <td>{{Product.name}}</td>
+                <td>{{Product.brand}}</td>
+                <td>{{Product.price}}</td>
+                <td>{{Product.qty}}</td>
+                <td>{{Product.warranty}}</td>
+                <td>{{Product.Home_delivery}}</td>
+
+
+             </tbody>
+
+{% endfor %}
+     {% endif %}
+</tbody>
+
+</body>
+</html>
